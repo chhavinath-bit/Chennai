@@ -9,7 +9,7 @@ export default function JobItem({data}) {
       
       const date= new Date()
   return (
-    <div className='w-[19%] box-border text-black h-[40vh] shadow-md mx-1 py-2 px-2'>
+    <div className='w-[95%] md:w-[45%] lg:w-[19%] box-border text-black h-[40vh] shadow-md mx-1 py-2 px-2'>
       <div className='w-full h-[13vh] flex justify-between py-1'><img className='text-lg font-bold h-full aspect-square w-auto' src={data.Company_logo} alt=''></img> <button className='bg-[#B0D9FF] px-2 rounded-lg h-[35%] text-sm'>{Math.floor((parseCustomDateString(date)-parseCustomDateString(data.PostedOn))/(1000 * 60 * 60))}h Ago</button></div>
       <div className='text-xl font-bold'>{data.Title}</div>
       <div className='w-full flex box-border justify-between'>
