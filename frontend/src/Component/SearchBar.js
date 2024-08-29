@@ -43,12 +43,12 @@ export default function SearchBar({searchParam, setSearchParam}) {
  </select> </div>
          <div className='w-px h-2/3 bg-black'></div>
          
-         <div className='w-1/4 h-full items-center px-10'>
+         <div className='w-1/4 h-full items-center px-10 justify-center'>
          <div className='flex w-full justify-between text-sm'>
             <div>Salary Per Month</div>
             <div className='flex items-center'><BsCurrencyRupee/>{searchParam.range[0]}k-<BsCurrencyRupee/>{searchParam.range[1]}k</div>
          </div>
-         <Box sx={{ width: 300 }}>
+         <div className='w-4/5'>
       <Slider
         getAriaLabel={() => 'Salary range'}
         value={searchParam.range}
@@ -59,7 +59,7 @@ export default function SearchBar({searchParam, setSearchParam}) {
       max={250} 
       step={1}
       />
-    </Box>
+    </div>
           </div>
       </div>
   )
