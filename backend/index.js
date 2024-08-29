@@ -6,7 +6,7 @@ const app = express()
 var cors = require('cors')
 
 app.use(cors({
-  origin: 'https://your-frontend-domain.com', 
+  origin: 'https://chennai-assignment-frontend.onrender.com/', 
   methods: ['GET', 'POST', 'PUT', 'DELETE']
 }));
 app.use(express.json())
