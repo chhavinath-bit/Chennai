@@ -56,7 +56,7 @@ export default function SearchBar({searchParam, setSearchParam}) {
         valueLabelDisplay="auto"
         color="black"
         min={0}  
-      max={250} 
+      max={300} 
       step={1}
       />
     </div>
