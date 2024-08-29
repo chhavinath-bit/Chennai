@@ -104,7 +104,7 @@ export default function JobForm({jobpost, setArr, arr}) {
       return;
     }
     try{
-      const data= await fetch('http://localhost:5000/api/jobs/postNews', {
+      const data= await fetch('https://chennai.onrender.com/api/jobs/postNews', {
         method:"POST",
         headers:{
           "content-type":"application/json"
