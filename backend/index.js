@@ -5,11 +5,7 @@ const connectToDB = require("./db");
 const app = express()
 var cors = require('cors')
 
-app.use(cors({
-  origin: 'https://chennai-assignment-frontend.onrender.com/', 
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-}));
+app.use(cors());
 app.use(express.json())
 connectToDB()
 app.use('/api/jobs', require('./routes/jobs'))
