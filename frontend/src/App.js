@@ -18,7 +18,7 @@ function App() {
   const debouncedSearchTerm = useDebounce(searchParam, 700);
   const getData= async(debouncedData)=>{
     try{
-      const data= await fetch(`http://localhost:5000/api/jobs/getNews?Title=${debouncedData.Title}&Location=${debouncedData.Location}&Type=${debouncedData.Type}&rangel=${debouncedData.range[0]}&rangeh=${debouncedData.range[1]}`, {
+      const data= await fetch(`https://chennai.onrender.com/api/jobs/getNews?Title=${debouncedData.Title}&Location=${debouncedData.Location}&Type=${debouncedData.Type}&rangel=${debouncedData.range[0]}&rangeh=${debouncedData.range[1]}`, {
         method:"GET",
         headers:{
           "content-type":"application/json"
