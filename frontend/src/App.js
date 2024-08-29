@@ -13,7 +13,7 @@ function App() {
     Title:"",
     Location:"",
     Type:"",  
-    range:[0,150],
+    range:[0,300],
   })
   const debouncedSearchTerm = useDebounce(searchParam, 700);
   const getData= async(debouncedData)=>{
