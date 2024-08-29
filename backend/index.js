@@ -6,7 +6,7 @@ const app = express()
 var cors = require('cors')
 
 app.use(cors({
-  origin: 'https://chennai-assignment-frontend.onrender.com/', 
+  origin: 'https://chennai-assignment-frontend.onrender.com', 
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
