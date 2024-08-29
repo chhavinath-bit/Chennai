@@ -5,7 +5,10 @@ const connectToDB = require("./db");
 const app = express()
 var cors = require('cors')
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://your-frontend-domain.com', 
+  methods: ['GET', 'POST', 'PUT', 'DELETE']
+}));
 app.use(express.json())
 connectToDB()
 app.use('/api/jobs', require('./routes/jobs'))
