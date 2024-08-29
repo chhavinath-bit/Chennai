@@ -55,6 +55,9 @@ export default function SearchBar({searchParam, setSearchParam}) {
         onChange={handleChange}
         valueLabelDisplay="auto"
         color="black"
+        min={0}  
+      max={250} 
+      step={1}
       />
     </Box>
           </div>

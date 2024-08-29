@@ -73,8 +73,9 @@ export default function JobForm({jobpost, setArr, arr}) {
       }, 3000);
       return;
     }
-    if(jobInfo.rangelt==="" || jobInfo.rangeht==="" || jobInfo.rangelt> jobInfo.rangeht){
-      console.log(jobInfo.rangeht, jobInfo.rangelt)
+    if(jobInfo.rangelt==="" || jobInfo.rangeht==="" || Number(jobInfo.rangelt)> Number(jobInfo.rangeht)){
+      
+      
       errmsg.current.style.display = "flex";
       errmsg.current.innerText = "Please Provide valid Salary Range";
       setTimeout(() => {
@@ -115,7 +116,7 @@ export default function JobForm({jobpost, setArr, arr}) {
           Location:jobInfo.Location,
           Type:jobInfo.Type,  
           Deadline:jobInfo.Deadline,
-          range:[jobInfo.rangelt, jobInfo.rangeht],
+          range:[Number(jobInfo.rangelt),Number(jobInfo.rangeht)],
           Description:jobInfo.Description,
         })
       })
@@ -193,7 +194,7 @@ export default function JobForm({jobpost, setArr, arr}) {
        </textarea>
      </div>
      <div className='w-full box-border flex justify-between h-[10vh] flex-shrink-0 px-4 text-lg'>
-     <button className='border-2 border-black w-1/3 rounded-xl h-3/4'>Save Draft</button>
+     <button className='border-2 border-black w-1/3 rounded-xl h-3/4' onClick={()=> jobpost.current.style.display="none"}>Save Draft</button>
       <button className='w-1/3 bg-[#00AAFF] text-white rounded-xl h-3/4' onClick={SubmitJob}>Publish</button>
      </div>
      <p className="mt-3 text-red-600 text-xl italic hidden h-[5%]" ref={errmsg}>
