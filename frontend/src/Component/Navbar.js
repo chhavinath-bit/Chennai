@@ -7,8 +7,8 @@ export default function Navbar({setArr,arr}) {
         jobpost.current.style.display=(jobpost.current.style.display==="flex"?"none":"flex") 
     }
   return (
-    <div className='w-[890px] border border-slate-200  h-2/5 flex-shrink-0 flex items-center shadow-xl rounded-[122px] box-border text-base'>
-    <div className='w-[838px] h-[48px] top-[16px] left-[26px] flex justify-around'>
+    <div className='w-[70%] border border-slate-200  h-2/5 flex-shrink-0 flex items-center shadow-xl rounded-[122px] box-border text-base'>
+    <div className='w-[95%] top-[16px] left-[26px] flex justify-around'>
 
     <img className='h-full aspect-square' src={logo}></img>
     <button>Home</button>
