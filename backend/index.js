@@ -7,7 +7,8 @@ var cors = require('cors')
 
 app.use(cors({
   origin: 'https://chennai-assignment-frontend.onrender.com/', 
-  methods: ['GET', 'POST', 'PUT', 'DELETE']
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json())
 connectToDB()
